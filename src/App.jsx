@@ -1,14 +1,7 @@
-import { useState, useRef } from 'react';
-import { Header, Main, Footer } from './contect'
+import  User from './User'
 import './App.scss';
 function App() {
-    return (
-      <>
-        <Header />
-        <Main />
-        <Footer />
-      </>
-    )
+    return <User />
 }
 
 export default App;
