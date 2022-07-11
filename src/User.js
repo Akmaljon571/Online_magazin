@@ -1,12 +1,15 @@
 import { Header, Main, Footer } from './page'
 import { Container } from './components'
-import Home from './home/home';
+import Routess from './routes/routes';
+
 
 function User() {
     return ( 
         <Container>
          <Header />
-         <Main><Home /></Main>
+         <Main>
+            <Routess />
+         </Main>
          <Footer />
         </Container>
      );

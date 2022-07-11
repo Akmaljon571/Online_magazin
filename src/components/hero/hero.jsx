@@ -4,12 +4,14 @@ import useStart from '../../hooks/useStart'
 import { Image } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { Input, Space, Pagination  } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Hero() {
-  const { baza, setBaza } = useStart()
+  const { baza, setRender } = useStart()
     const onSearch = (value) => console.log(value);
+    const navigate = useNavigate()
     const [visible, setVisible] = useState(false);
     const { Search } = Input;
     // useEffect(() => {
@@ -18,10 +20,16 @@ function Hero() {
     //         .then(json => setBaza(json))
     // }, []); // buni backend kelgandan keyin togilash kere
     console.log(baza);
-
+    // let data
 
     let render = (evt) => {
-      console.log(evt.target.id);
+      let data = baza.filter(key => {
+        if (key.name == evt.target.id) {
+          return key
+        }
+      })
+      setRender(data)
+      navigate('/')
     }
 
     return ( 
