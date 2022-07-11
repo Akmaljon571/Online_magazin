@@ -1,0 +1,20 @@
+@import "../../utils/scss/var.scss";
+
+body{
+    background-color: #EAEAEA !important;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    &_svg{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100px;
+        margin-top: 20px;
+    }
+}

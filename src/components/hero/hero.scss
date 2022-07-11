@@ -1,0 +1,46 @@
+.hero {
+  cursor: pointer;
+  margin-top: 22px;
+  width: 70%;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+
+  &_img {
+    width: 70px;
+    border-radius: 50%;
+  }
+
+  &_h2 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}
+
+.hero_ota {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ant-image-mask-info {
+  border-radius: 50% !important;
+}
+
+.ant-image-mask {
+  border-radius: 50% !important;
+}
+
+.ant-input-group-wrapper {
+  width: 25% !important;
+}
+
+// .ant-input-group-addon{
+//   width: 20px !important;
+// }
