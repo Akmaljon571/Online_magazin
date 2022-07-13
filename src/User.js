@@ -17,15 +17,11 @@ import useStart from './hooks/useStart';
    const { collapsed, setCollapsed } = useStart()
 
    const menuClose = (evt) => {
-      console.log(evt.target.className);
       if (evt.target.className == 'logo_bg') {
          setCollapsed(!collapsed)
       }
    }
 
-
-
-   console.log(kereli[0].name);
     return ( 
       <Container>
       <Layout>

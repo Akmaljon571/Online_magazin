@@ -7,7 +7,7 @@ import useStart from "../../hooks/useStart";
 import { Input } from 'antd';
 
 function Header() {
-  const { sersa, karzinka, collapsed, setCollapsed, til, setTil } = useStart()
+  const { sersa, karzinka, collapsed, setCollapsed, til, setTil, tanla } = useStart()
   const { Search } = Input;
   const shef = useRef()
 
@@ -54,7 +54,7 @@ function Header() {
               </select>
           <div className="navbar_svg">
             <Link to="/">
-              <Badge count={sersa}>
+              <Badge count={tanla.length}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"

@@ -9,7 +9,8 @@ export const StatePriveder = ({ children }) => {
             return key
         }
     })
-    const [sersa, setSersa] = useState(1);  // sersa bosilishini sanash
+    const [sersa, setSersa] = useState(false);  // sersa bosilishini sanash
+    const [tanla, setTanla] = useState([]); // sersa tanlaganlarni yigish uchun
     const [karzinka, setKarzinka] = useState(2);  // karzinkaga nechta tovar ketayotganini sanash
     const [baza, setBaza] = useState(kereli); // ummumiy data malumotlari
     const [render, setRender] = useState(renerUchun); // render boladigan state filter
@@ -31,7 +32,9 @@ export const StatePriveder = ({ children }) => {
         collapsed,
         setCollapsed,
         til,
-        setTil
+        setTil,
+        tanla,
+        setTanla
     }
 
 

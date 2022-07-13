@@ -15,7 +15,6 @@ function Hero() {
     //         .then(response => response.json())
     //         .then(json => setBaza(json))
     // }, []); // buni backend kelgandan keyin togilash kere
-    console.log(baza);
     // let data
 
     let render = (evt) => {
