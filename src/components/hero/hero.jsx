@@ -2,18 +2,14 @@ import './hero.scss'
 import React, { useEffect, useState } from 'react'
 import useStart from '../../hooks/useStart'
 import { Image } from 'antd';
-import { AudioOutlined } from '@ant-design/icons';
-import { Input, Space, Pagination  } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 
 
 function Hero() {
   const { baza, setRender } = useStart()
-    const onSearch = (value) => console.log(value);
     const navigate = useNavigate()
     const [visible, setVisible] = useState(false);
-    const { Search } = Input;
     // useEffect(() => {
     //     fetch('https://jsonplaceholder.typicode.com/photos')
     //         .then(response => response.json())
@@ -24,7 +20,7 @@ function Hero() {
 
     let render = (evt) => {
       let data = baza.filter(key => {
-        if (key.name == evt.target.id) {
+        if (key.title == evt.target.id) {
           return key
         }
       })
@@ -65,18 +61,11 @@ function Hero() {
                    ))}
                   </Image.PreviewGroup>
                  </div>
-                 <h2 onClick={render} id = {key.name} className='hero_h2'>{key.name}</h2>
+                 <h2 onClick={render} id = {key.title} className='hero_h2'>{key.name}</h2>
                </div>
             ))}
 
         </div>
-            <Search
-                placeholder="input search text"
-                allowClear
-                enterButton="Search"
-                size="large"
-                onSearch={onSearch}
-              />
         </div>
      );
 }

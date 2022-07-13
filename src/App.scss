@@ -32,3 +32,98 @@ body {
       monospace;
   }
 
+.ant-layout-header {
+  background-color: transparent !important;
+  padding: 0 20px !important;
+  margin-bottom: 150px !important;
+}
+
+#root{
+  height: 100%;
+}
+
+.ant-layout-sider-dark{
+  position: fixed !important;
+  height: 100% !important;
+  max-width: 500px !important;
+  min-width: 500px !important;
+  z-index: 1 !important;
+  padding-top: 80px;
+  background-color: #fff;
+  
+
+}
+
+.ant-layout-sider-collapsed{
+   display: none !important;
+}
+
+.logo_X{
+  position: absolute;
+  background-color: rgb(73, 71, 71);
+  float: right;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  border-radius: 50%;
+  margin-bottom: 80px;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover{
+   background-color: rgb(129, 126, 126);
+  }
+}
+
+.logoDad{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoMenu{
+  width: 140px !important;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url('./img/Mahina_Logo-Black_410x\ \(1\).webp');
+  background-size: contain;
+  border-radius: 2px;
+  position: absolute;
+  margin-top: -70px;
+
+
+}
+
+.logo_bg{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.815);
+}
+
+.logo_footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 110px;
+  background-color: #fff;
+  background-image: url('./img/EIG1.gif');
+  background-size: 500px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.ant-ribbon-wrapper{
+  margin-right: 15px;
+}

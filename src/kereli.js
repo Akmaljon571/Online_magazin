@@ -1,6 +1,7 @@
 export default[
     {
         name: 'Kiyim',
+        title: 'kiyim',
         img1: 'https://via.placeholder.com/600/771796',
         obj: [{
             id: 1,
@@ -120,6 +121,7 @@ export default[
     },
     {
         name: 'Hijob',
+        title: 'hijob',
         img1: 'https://via.placeholder.com/600/771796',
         obj: [{
             id: 1,

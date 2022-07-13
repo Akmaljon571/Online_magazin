@@ -5,7 +5,7 @@ export const State = createContext()
 
 export const StatePriveder = ({ children }) => {
     let renerUchun = kereli.filter((key) => {
-        if (key.name == 'Kiyim') {
+        if (key.title == 'kiyim') {
             return key
         }
     })
@@ -14,6 +14,9 @@ export const StatePriveder = ({ children }) => {
     const [baza, setBaza] = useState(kereli); // ummumiy data malumotlari
     const [render, setRender] = useState(renerUchun); // render boladigan state filter
     const [single, setSingle] = useState({}); // single pagega otish
+    const [collapsed, setCollapsed] = useState(true); // menu button ochilib yopilishi uchun
+    const [til, setTil] = useState('uz') // til tanlash uchun state;
+
     const data  ={
         sersa,
         setSersa,
@@ -24,7 +27,11 @@ export const StatePriveder = ({ children }) => {
         render,
         setRender,
         single,
-        setSingle
+        setSingle,
+        collapsed,
+        setCollapsed,
+        til,
+        setTil
     }
 
 

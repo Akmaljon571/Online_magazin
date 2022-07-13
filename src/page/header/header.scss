@@ -1,14 +1,13 @@
 @import "../../utils/scss/var.scss";
 
 body{
-    background-color: #EAEAEA !important;
+    background-color: #f0f2f5 !important;
 }
 
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px;
 
     &_svg{
         display: flex;
@@ -18,3 +17,85 @@ body{
         margin-top: 20px;
     }
 }
+
+.header_menu{
+    padding-top: 20px;
+    
+
+    &:hover{
+        color: cadetblue;
+    }
+}
+
+.tell_Link{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.tell_nomer{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    margin-left: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    
+}
+
+.tell_admin{
+    height: 0;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.header{
+    &_search{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &_input{
+         height: 50px;
+         width: 700px;
+         border-radius: 45px;
+         border: 2px solid pink;
+         padding: 10px 15px;
+         font-size: 18px;
+    } 
+
+    &_svg{
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+        
+        &:hover{
+            color: sandybrown;
+        }
+    }
+
+    &_til{
+        margin-left: 50px;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 17px;
+        background-color: transparent;
+    }
+}
+
