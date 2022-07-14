@@ -48,9 +48,9 @@ function Header() {
                       </Link>
               </div>
               <select  ref={shef} className="header_til" onChange={select_til}> 
-                <option className="option" value="uz">Uz</option>
-                <option value="ru">Ru</option>
-                <option value="en">En</option>
+                <option value="uz">🇺🇿  Uz</option>
+                <option value="ru">🇷🇺 Ru</option>
+                <option value="en">🇱🇷 En</option>
               </select>
           <div className="navbar_svg">
             <Link to="/">

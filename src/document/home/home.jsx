@@ -5,7 +5,7 @@ import { Badge } from 'antd';
 import React from 'react';
 
 function Home() {
-    const { render, setSingle, tanla, setTanla, sersa, setSersa, setRender } = useStart()
+  const { render, setSingle, tanla, setTanla, sersa, setSersa, setRender } = useStart()
     const navigate = useNavigate()
     const single = (evt, id) => {
        if (evt.target.classList[0] === 'bi') {
@@ -20,15 +20,14 @@ function Home() {
     }
 
 
-
     return ( 
        <>
-        {render.slice(0, 12).map(key => (
+        {render.map(key => (
             <div key={key.name} className="kiyim">
                 <h1 className='kiyim_h1'>{key.name}</h1>
                 <ul className="kiyim_list">
                 
-                {key.obj.map(item => (
+                {key.obj.slice(0, 12).map(item => (
                     <li key={item.id} onClick={(evt) => single(evt, item)} className="kiyim_item">
                        {item.eskiNarx ? <Badge.Ribbon text="Aksiya" color="green">
                         </Badge.Ribbon> : ''}
