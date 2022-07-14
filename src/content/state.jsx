@@ -17,6 +17,7 @@ export const StatePriveder = ({ children }) => {
     const [single, setSingle] = useState({}); // single pagega otish
     const [collapsed, setCollapsed] = useState(true); // menu button ochilib yopilishi uchun
     const [til, setTil] = useState('uz') // til tanlash uchun state;
+    // const [single, setsingle] = useState(initialState);
 
     const data  ={
         sersa,

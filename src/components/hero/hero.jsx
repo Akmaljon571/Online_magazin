@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Hero() {
-  const { baza, setRender } = useStart()
+  const { baza, setRender, render } = useStart()
     const navigate = useNavigate()
     const [visible, setVisible] = useState(false);
     // useEffect(() => {
@@ -17,7 +17,7 @@ function Hero() {
     // }, []); // buni backend kelgandan keyin togilash kere
     // let data
 
-    let render = (evt) => {
+    let rendercopy = (evt) => {
       let data = baza.filter(key => {
         if (key.title == evt.target.id) {
           return key
@@ -60,7 +60,7 @@ function Hero() {
                    ))}
                   </Image.PreviewGroup>
                  </div>
-                 <h2 onClick={render} id = {key.title} className='hero_h2'>{key.name}</h2>
+                 <h2 onClick={rendercopy} id = {key.title} className={render[0].title == key.title ? 'hero_h2 footer_active' : 'hero_h2'}>{key.name}</h2>
                </div>
             ))}
 

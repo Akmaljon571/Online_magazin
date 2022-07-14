@@ -17,7 +17,7 @@ function Home() {
          setSingle(id)
          navigate('/single')
        }
-    }
+      }
 
 
     return ( 
