@@ -67,8 +67,8 @@ function Header() {
                 </svg>
               </Badge>
             </Link>
-            <Link to="/">
-              <Badge count={karzinka}>
+            <Link to="/karzinka">
+              <Badge count={karzinka.length}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"

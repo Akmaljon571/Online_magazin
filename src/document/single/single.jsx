@@ -1,9 +1,15 @@
 import useStart from "../../hooks/useStart";
-import karzinka from '../../img/karzinka_btn.png'
+import { useNavigate } from "react-router-dom";
 import "./single.scss";
 
 function Single() {
-  const { single } = useStart();
+  const { single, karzinka, setKarzinka } = useStart();
+  const navigate = useNavigate()
+  const btnKarzinka = () => {
+    setKarzinka([...karzinka, single]);
+    navigate('/karzinka')
+  }
+
 
   return (
     <>
@@ -113,7 +119,7 @@ function Single() {
           </div>
           <div className="single_btn">
             <button className="single_btn--btn ">Купить!</button>
-             <button className="single_btn--svg">
+             <button onClick={btnKarzinka} className="single_btn--svg">
               <img src={karzinka} className='single_btn--svg--img' alt="" />
               Добавить в корзину
              </button>
