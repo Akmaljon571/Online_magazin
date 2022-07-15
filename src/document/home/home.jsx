@@ -1,11 +1,11 @@
 import useStart from '../../hooks/useStart';
 import './home.scss'
 import { useNavigate } from 'react-router-dom'
-import { Badge } from 'antd';
+import { Badge, Empty } from 'antd';
 import React from 'react';
 
 function Home() {
-  const { render, setSingle, tanla, setTanla, sersa, setSersa, setRender } = useStart()
+  const { render, setSingle, tanla, setTanla, search, setSersa, setRender } = useStart()
     const navigate = useNavigate()
     const single = (evt, id) => {
        if (evt.target.classList[0] === 'bi') {
@@ -22,7 +22,9 @@ function Home() {
 
     return ( 
        <>
-        {render.map(key => (
+        {search ? <Empty className='Empy' /> :
+        <>
+          {render.map(key => (
             <div key={key.name} className="kiyim">
                 <h1 className='kiyim_h1'>{key.name}</h1>
                 <ul className="kiyim_list">
@@ -55,7 +57,9 @@ function Home() {
                 
                 
             </div>
-        ))}
+          ))}
+          </>
+        }
        </>
      );
 }

@@ -75,9 +75,13 @@ body{
          height: 50px;
          width: 700px;
          border-radius: 45px;
-         border: 2px solid pink;
-         padding: 10px 15px;
+         border: 0px solid pink;
+         padding: 10px 25px;
          font-size: 18px;
+
+         &:focus{
+            outline: none;
+         }
     } 
 
     &_svg{

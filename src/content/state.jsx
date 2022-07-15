@@ -17,6 +17,7 @@ export const StatePriveder = ({ children }) => {
     const [single, setSingle] = useState({}); // single pagega otish
     const [collapsed, setCollapsed] = useState(true); // menu button ochilib yopilishi uchun
     const [til, setTil] = useState('uz') // til tanlash uchun state;
+    const [search, setSearch] = useState(false);
 
     const data  ={
         sersa,
@@ -34,7 +35,9 @@ export const StatePriveder = ({ children }) => {
         til,
         setTil,
         tanla,
-        setTanla
+        setTanla,
+        search,
+        setSearch
     }
 
 

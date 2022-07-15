@@ -3,7 +3,7 @@ import { State } from '../content/state'
 
 
 function useStart() {
-   const { sersa, setSersa, karzinka, setKarzinka, baza, setBaza, render, setRender, single, setSingle, collapsed, setCollapsed, til, setTil, tanla, setTanla } = useContext(State)
+   const { sersa, setSersa, karzinka, setKarzinka, baza, setBaza, render, setRender, single, setSingle, collapsed, setCollapsed, til, setTil, tanla, setTanla, search, setSearch } = useContext(State)
 
     return { 
        sersa,
@@ -21,7 +21,9 @@ function useStart() {
        til,
        setTil,
        tanla,
-       setTanla
+       setTanla,
+       search,
+      setSearch
     };
 }
 
