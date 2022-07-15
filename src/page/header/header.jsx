@@ -53,7 +53,7 @@ function Header() {
                 <option value="en">🇱🇷 En</option>
               </select>
           <div className="navbar_svg">
-            <Link to="/">
+            <Link to="/tanlanganlar">
               <Badge count={tanla.length}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

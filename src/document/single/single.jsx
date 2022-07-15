@@ -1,9 +1,9 @@
 import useStart from "../../hooks/useStart";
+import karzinka from '../../img/karzinka_btn.png'
 import "./single.scss";
 
 function Single() {
   const { single } = useStart();
-  console.log(single);
 
   return (
     <>
@@ -91,6 +91,34 @@ function Single() {
             </div>
           </li>
         </ul>
+        <div className="single_data">
+          <div className="single_left">
+             <div className="single_left--header">
+             Описание и характеристики
+             </div>
+             <div className="single_left--main">
+              <span>
+                Активное шумоподавление: Нет
+              </span>
+              <span>
+                Вес: 10 гр
+              </span>
+              <span>
+                Влагозащита: Нет
+              </span>
+              <span>
+                Длина кабеля: 1.2 м
+              </span>
+             </div>
+          </div>
+          <div className="single_btn">
+            <button className="single_btn--btn ">Купить!</button>
+             <button className="single_btn--svg">
+              <img src={karzinka} className='single_btn--svg--img' alt="" />
+              Добавить в корзину
+             </button>
+          </div>
+        </div>
       </div>
     </>
   );
