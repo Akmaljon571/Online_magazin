@@ -103,12 +103,12 @@ function Karzinka() {
                     <h2 className="sanoq_rigth--h2">Admin</h2>
                     <p className="sanoq_rigth--p">+998900456961</p>
                   </div>
-                  <Link
-                    to={{ pathname: "tel:+998900456961" }}
+                  <a
+                    href={ "tel:+998900456961" }
                     className="sanoq_bottom--link "
                   >
                     +998900456961
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

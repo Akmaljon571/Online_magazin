@@ -1,5 +1,5 @@
 import useStart from "../../hooks/useStart";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./single.scss";
 
 function Single() {
@@ -118,7 +118,7 @@ function Single() {
              </div>
           </div>
           <div className="single_btn">
-            <button className="single_btn--btn ">Купить!</button>
+            <Link to={'/tolov'} onClick={btnKarzinka}  className="single_btn--btn">Купить!</Link>
              <button onClick={btnKarzinka} className="single_btn--svg">
               <img src={karzinka} className='single_btn--svg--img' alt="" />
               Добавить в корзину
