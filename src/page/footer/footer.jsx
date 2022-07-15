@@ -2,6 +2,7 @@ import Fixed from '../../components/fixed/fixed'
 import { Link, useNavigate } from 'react-router-dom'
 import useStart from '../../hooks/useStart'
 import './footer.scss'
+import language from '../../language'
 
 function Footer() {
     const { baza, setRender, render, til, setTil } = useStart()
@@ -38,7 +39,7 @@ function Footer() {
                         ))}
                 </ul>
                 <div className="footer_til--ota">
-                    <h2 className='footer_h3'>Tilni o'zgartirish</h2>
+                    <h2 className='footer_h3'>{language[til].til}</h2>
                     <div className="footer_til" onClick={yazik}>
                         <span className='footer_internet'></span>
                         <span className={til == 'uz' ? 'footer_uz uz' : 'footer_uz'}>O'zb</span>
@@ -47,12 +48,12 @@ function Footer() {
                     </div>
                 </div>
                 <div className="footer_ulash">
-                <h2 className='footer_h5'>Bog'lanish</h2>
+                <h2 className='footer_h5'>{language[til].boglan}</h2>
                 <div className="img_otas">
-                    <Link to={'/'} className="footer_tg"></Link>
-                    <Link to={'/'} className="footer_insta"></Link>
-                    <Link to={'/'} className="footer_call"></Link>
-                    <Link to={'/'} className="footer_web"></Link>
+                    <a href={'/'} className="footer_tg"></a>
+                    <a href={'/'} className="footer_insta"></a>
+                    <a href={'/'} className="footer_call"></a>
+                    <Link to={'/tolov'} className="footer_web"></Link>
                 </div>
                 </div>
         </footer>

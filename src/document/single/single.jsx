@@ -1,15 +1,16 @@
 import useStart from "../../hooks/useStart";
+import Language from '../../language'
 import { useNavigate, Link } from "react-router-dom";
 import "./single.scss";
+import language from "../../language";
 
 function Single() {
-  const { single, karzinka, setKarzinka } = useStart();
+  const { single, karzinka, til, setKarzinka } = useStart();
   const navigate = useNavigate()
   const btnKarzinka = () => {
     setKarzinka([...karzinka, single]);
     navigate('/karzinka')
   }
-
 
   return (
     <>
@@ -91,7 +92,7 @@ function Single() {
             <div className="single_footer">
               <h2 className="single_name">{single.name}</h2>
               <div className="single_narx">
-                <span className="single_narx1">{single.narx} so'm</span>
+                <span className="single_narx1">{single.narx} {Language[til].som}</span>
                 <div className="single_narx2"><span className="single_narxChiziq"></span>{single.eskiNarx}</div>
               </div>
             </div>
@@ -100,7 +101,7 @@ function Single() {
         <div className="single_data">
           <div className="single_left">
              <div className="single_left--header">
-             Описание и характеристики
+             {language[til].sifat}
              </div>
              <div className="single_left--main">
               <span>
@@ -118,10 +119,10 @@ function Single() {
              </div>
           </div>
           <div className="single_btn">
-            <Link to={'/tolov'} onClick={btnKarzinka}  className="single_btn--btn">Купить!</Link>
+            <Link to={'/tolov'} onClick={btnKarzinka}  className="single_btn--btn">{language[til].sot}</Link>
              <button onClick={btnKarzinka} className="single_btn--svg">
               <img src={karzinka} className='single_btn--svg--img' alt="" />
-              Добавить в корзину
+              {language[til].qosh}
              </button>
           </div>
         </div>

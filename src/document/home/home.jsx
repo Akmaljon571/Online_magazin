@@ -2,10 +2,11 @@ import useStart from '../../hooks/useStart';
 import './home.scss'
 import { useNavigate } from 'react-router-dom'
 import { Badge, Empty } from 'antd';
+import Language from '../../language';
 import React from 'react';
 
 function Home() {
-  const { render, setSingle, tanla, setTanla, search, setSersa, setRender } = useStart()
+  const { render, setSingle, tanla, setTanla, search, til, setSersa, setRender } = useStart()
     const navigate = useNavigate()
     const single = (evt, id) => {
        if (evt.target.classList[0] === 'bi') {
@@ -44,9 +45,9 @@ function Home() {
                      <div className="kiyim_narx">
                         <h3 className='kiyim_h3'>{item.name}</h3>
                         <div className="kiyim_sp">
-                          <span className="kiyimNarx">{item.narx} so'm</span>
+                          <span className="kiyimNarx">{item.narx} {Language[til].som}</span>
                           {
-                            item.eskiNarx ? <span className="kiyimEski">{item.eskiNarx} so'm</span> : ''
+                            item.eskiNarx ? <span className="kiyimEski">{item.eskiNarx} {Language[til].som}</span> : ''
                           }
                           
                         </div>

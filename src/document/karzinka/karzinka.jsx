@@ -1,13 +1,15 @@
 import useStart from "../../hooks/useStart";
 import { Link, useNavigate } from "react-router-dom";
 import udalit from "../../img/udalit.png";
+import Language from "../../language";
 import "./karzinka.scss";
 import kar from "../../img/Иллюстрация.png";
 import { Image } from "antd";
 import React, { useState } from "react";
+import language from "../../language";
 
 function Karzinka() {
-  const { karzinka, setKarzinka } = useStart();
+  const { karzinka, setKarzinka, til } = useStart();
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
 
@@ -30,15 +32,15 @@ function Karzinka() {
       {karzinka.length == 0 ? (
         <div className="bosh">
           <img src={kar} alt="" />
-          <h2 className="bosh_h2">Корзина пуста</h2>
-          <p className="bosh_p">Но это никогда не поздно исправить :)</p>
+          <h2 className="bosh_h2">{language[til].bosh}</h2>
+          <p className="bosh_p">{language[til].lekin}</p>
           <Link to={"/"} className="bosh_btn">
-            В каталог товаров
+            {language[til].mahsulot}
           </Link>
         </div>
       ) : (
         <div className="sotuv">
-          <h2 className="sotuv_h2">Корзина</h2>
+          <h2 className="sotuv_h2">{language[til].karzinka}</h2>
 
           {karzinka.map((key) => (
             <div key={key.id} className="sotuv_ota">
@@ -75,7 +77,7 @@ function Karzinka() {
                 </div>
                 <div className="sotuv_main">
                   <h2 className="sotuv_main--h2">{key.name}</h2>
-                  <p className="sotuv_main--p">{key.narx} so'm</p>
+                  <p className="sotuv_main--p">{key.narx} {Language[til].som}</p>
                 </div>
                 <div className="sotuv_footer">
                   <img
@@ -85,22 +87,22 @@ function Karzinka() {
                     className="sotuv_footer--udalit"
                     alt=""
                   />
-                  <p className="sotuv_footer--narx">{key.narx} so'm</p>
+                  <p className="sotuv_footer--narx">{key.narx} {Language[til].som}</p>
                 </div>
               </div>
               <div className="sanoq_rigth">
                 <div className="sanoq_rigth--header">
                   <div className="sanoq_rigth--top">
-                    <h2 className="sanoq_rigth--h2">ИТОГО</h2>
-                    <p className="sanoq_rigth--p">{key.narx} so'm</p>
+                    <h2 className="sanoq_rigth--h2">{language[til].jami}</h2>
+                    <p className="sanoq_rigth--p">{key.narx} {Language[til].som}</p>
                   </div>
                   <button onClick={navi} className="sanoq_bottom--btn">
-                    Перейти к оформлению
+                    {language[til].otish}
                   </button>
                 </div>
                 <div className="sanoq_rigth--footer">
                   <div className="sanoq_rigth--top">
-                    <h2 className="sanoq_rigth--h2">Admin</h2>
+                    <h2 className="sanoq_rigth--h2">{language[til].admin}</h2>
                     <p className="sanoq_rigth--p">+998900456961</p>
                   </div>
                   <a

@@ -2,13 +2,18 @@ import useStart from '../../hooks/useStart';
 import locaion from '../../img/location.png'
 import qalam from '../../img/qalam.png'
 import arrow from '../../img/arrow.png'
+import dastavka from '../../img/dastavka.png'
+import Language from '../../language';
 import { useState, useEffect } from 'react';
 import './tolov.scss'
+import language from '../../language';
+import { useNavigate } from 'react-router-dom';
+
 
 function Tolov() {
-    const { karzinka } = useStart()
+    const { karzinka, til } = useStart()
     const [jami, setJami] = useState(0);
-
+    const navigate = useNavigate()
     const inputNumber = (evt) => {
         if (evt.target.value.includes('_')) {
             
@@ -38,25 +43,30 @@ function Tolov() {
     }, [setJami]);
 
 
+    let dastavka = () => {
+        navigate('/dastavka')
+    }
+
+
     return ( 
         <>
            <div className="tolov">
              <h2 className="tolov_h2">
-              Оформление заказа
+              {language[til].zakaz}
              </h2> 
                 <div className="tolov_otas">
                     <div className="tolov_left">
                       <div className="tolov_header">
-                        <h3 className="tolov_header--h3">Доставка курьером</h3>
-                        <p className='tolov_header--p'>{jami} so'm</p>
+                        <h3 className="tolov_header--h3">{language[til].dastavka}</h3>
+                        <p className='tolov_header--p'>{jami} {Language[til].som}</p>
                       </div>
                       <div className="tolov_main">
                         <img src={locaion} className='tolov_main--image' alt="image" />
-                        <p className='tolov_main--p'>Адрес доставки</p>
+                        <p className='tolov_main--p'>{language[til].locat}</p>
                       </div>
                       <div className="tolov_footer">
                         <div className="tolov_footer--select--otas">
-                        <select className='tolov_footer--select'>
+                        <select className='tolov_footer--select' required>
                             <option value="Toshkent shahar">Toshkent Shahar</option>
                             <option value="Toshkent viloyat">Toshkent Viloyat</option>
                             <option value="Andijon">Andijon</option>
@@ -74,21 +84,21 @@ function Tolov() {
                         <img src={arrow} className='tolov_footer--select--img' alt="arrow" />
                         </div>
                         <label htmlFor="payon" className='tolov_footer--label'>
-                            <input type="text" className='tolov_footer--rayon' placeholder='Улица / Район' />
+                            <input type="text" required className='tolov_footer--rayon' placeholder={language[til].tuman} />
                             <img src={qalam} className="tolov_footer--qalam" alt="alt" />
                         </label>
                         <div className="label_otas">
                             <label htmlFor="payon" className='tolov_footer--label'>
-                                <input type="text" className='tolov_footer--rayon--left' placeholder='Дом' />
+                                <input type="text" required className='tolov_footer--rayon--left' placeholder={language[til].uy} />
                                 <img src={qalam} className="tolov_footer--qalam" alt="alt" />
                             </label>
                             <label htmlFor="payon" className='tolov_footer--label'>
-                                <input type="text" className='tolov_footer--rayon--rigth' placeholder='Подъезд' />
+                                <input type="text" className='tolov_footer--rayon--rigth' placeholder={language[til].padez} />
                                 <img src={qalam} className="tolov_footer--qalam" alt="alt" />
                             </label>
                         </div>
                         <label htmlFor="payon" className='tolov_footer--label--'>
-                            <input type="text" className='tolov_footer--rayon--bottom' placeholder='Квартира' />
+                            <input type="text" required className='tolov_footer--rayon--bottom' placeholder={language[til].kvartira} />
                             <img src={qalam} className="tolov_footer--qalam" alt="alt" />
                         </label>
                       </div>
@@ -97,7 +107,7 @@ function Tolov() {
                     <div className="royxat">
                          <div className="royxat_header">
                              <div className="royxat_header--h2">
-                               Ваш заказ
+                               {language[til].vash}
                              </div>
                              {karzinka.map(key => (
                                     <div key={key.id} className='royxat_header--nav'>
@@ -105,7 +115,7 @@ function Tolov() {
                                             {key.name}
                                         </span>
                                         <span className="royxat_header--narx">
-                                            {key.narx} so'm
+                                            {key.narx} {Language[til].som}
                                         </span>
                                     </div>
                              ))}
@@ -113,20 +123,20 @@ function Tolov() {
                          </div>
                          <div className="royxat_main">
                              <h2 className="royxat_main--h2">
-                               Способ оплаты
+                               {language[til].tolov}
                              </h2>
                              <a href='/' className='royxat_main--telegram'>
-                                Adminni orqali tolov qilish
+                                {language[til].tg}
                              </a>
                              <a href='/' className='royxat_main--telegram'>
-                                Bot orqali tolov qilish
+                                {language[til].insta}
                              </a>
                          </div>
                          <div className="royxat_footer">
-                           <h2 className='royxat_footer--raqam'>Номер получателя</h2>
+                           <h2 className='royxat_footer--raqam'>{language[til].qabul}</h2>
                            <input onChange={inputNumber} type="text" className='royxat_footer--nomer' placeholder='+998__ ___ __ __' />
                          </div>
-                         <button className="royxat_btn">Закончить оформление</button>
+                         <button onClick={dastavka} className="royxat_btn">{language[til].berish} </button>
                     </div>
                 </div>
            </div>
