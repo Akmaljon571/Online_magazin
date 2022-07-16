@@ -52,6 +52,7 @@ function Karzinka() {
                       visible: false,
                     }}
                     width={200}
+                    heigh={200}
                     src={key.img1}
                     onClick={() => setVisible(true)}
                   />

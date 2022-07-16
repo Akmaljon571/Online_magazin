@@ -38,6 +38,7 @@ function Hero() {
                    visible: false,
                  }}
                  width={70}
+                 height={70}
                  className='hero_img'
                  src={key.img1}
                  onClick={() => setVisible(true)}

@@ -7,7 +7,7 @@ import {
    VideoCameraOutlined,
  } from '@ant-design/icons';
  import { Layout, Menu } from 'antd';
- import React, { useState } from 'react';
+ import React from 'react';
  import kereli from './kereli';
 import useStart from './hooks/useStart';
  
@@ -17,7 +17,7 @@ import useStart from './hooks/useStart';
    const { collapsed, setCollapsed } = useStart()
 
    const menuClose = (evt) => {
-      if (evt.target.className == 'logo_bg') {
+      if (evt.target.className === 'logo_bg') {
          setCollapsed(!collapsed)
       }
    }
