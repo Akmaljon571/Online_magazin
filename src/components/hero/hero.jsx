@@ -1,5 +1,5 @@
 import './hero.scss'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import useStart from '../../hooks/useStart'
 import { Image } from 'antd';
 import { useNavigate } from 'react-router-dom';
@@ -19,11 +19,12 @@ function Hero() {
 
     let rendercopy = (evt) => {
       let data = baza.filter(key => {
-        if (key.title == evt.target.id) {
+        if (key.title === evt.target.id) {
           return key
-        }
+        } 
+        return false
       })
-      setRender(data)
+      setRender(data ? data : [])
       navigate('/')
     }
 
@@ -61,7 +62,7 @@ function Hero() {
                    ))}
                   </Image.PreviewGroup>
                  </div>
-                 <h2 onClick={rendercopy} id = {key.title} className={render[0].title == key.title ? 'hero_h2 footer_active' : 'hero_h2'}>{key.name}</h2>
+                 <h2 onClick={rendercopy} id = {key.title} className={render[0].title === key.title ? 'hero_h2 footer_active' : 'hero_h2'}>{key.name}</h2>
                </div>
             ))}
 

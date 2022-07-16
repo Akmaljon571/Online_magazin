@@ -6,7 +6,7 @@ import Language from '../../language';
 import React from 'react';
 
 function Home() {
-  const { render, setSingle, tanla, setTanla, search, til, setSersa, setRender } = useStart()
+  const { render, setSingle, tanla, setTanla, search, til} = useStart()
     const navigate = useNavigate()
     const single = (evt, id) => {
        if (evt.target.classList[0] === 'bi') {

@@ -93,16 +93,3 @@ import useStart from './hooks/useStart';
 }
 
 export default User;
-
-{/* <Container>
-         <div className='leftContainer'>
-            <Layout />
-         </div>
-         <div className='miniContainer'>
-         <Header />
-         <Main>
-            <Routess />
-         </Main>
-         <Footer />
-         </div>
-        </Container> */}

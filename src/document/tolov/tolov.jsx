@@ -2,7 +2,6 @@ import useStart from '../../hooks/useStart';
 import locaion from '../../img/location.png'
 import qalam from '../../img/qalam.png'
 import arrow from '../../img/arrow.png'
-import dastavka from '../../img/dastavka.png'
 import Language from '../../language';
 import { useState, useEffect } from 'react';
 import './tolov.scss'
@@ -18,7 +17,7 @@ function Tolov() {
         if (evt.target.value.includes('_')) {
             
         } else {
-            if (evt.target.value.length == 13) {
+            if (evt.target.value.length === 13) {
                 let code1 = evt.target.value.charAt(4)
                 let code = evt.target.value.charAt(5)
                 let raqam1 = evt.target.value.charAt(6)
@@ -37,10 +36,10 @@ function Tolov() {
     useEffect(() => {
         let data = 0
         karzinka.map(key => {
-          data = data + key.narx
+          return data = data + key.narx
         })
         setJami(data)
-    }, [setJami]);
+    }, [setJami, karzinka]);
 
 
     let dastavka = () => {
@@ -61,7 +60,7 @@ function Tolov() {
                         <p className='tolov_header--p'>{jami} {Language[til].som}</p>
                       </div>
                       <div className="tolov_main">
-                        <img src={locaion} className='tolov_main--image' alt="image" />
+                        <img src={locaion} className='tolov_main--image' alt="nmadur ekan" />
                         <p className='tolov_main--p'>{language[til].locat}</p>
                       </div>
                       <div className="tolov_footer">

@@ -23,13 +23,14 @@ function Karzinka() {
         if (key.id !== Number(evt.target.id)) {
           return key;
         }
+        return false
       })
     );
   };
 
   return (
     <>
-      {karzinka.length == 0 ? (
+      {karzinka.length === 0 ? (
         <div className="bosh">
           <img src={kar} alt="" />
           <h2 className="bosh_h2">{language[til].bosh}</h2>

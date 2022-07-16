@@ -2,9 +2,8 @@ import "./header.scss";
 import { Hero, Logo } from "../../components";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "antd";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import useStart from "../../hooks/useStart";
-import { Input } from "antd";
 import language from "../../language";
 
 function Header() {
@@ -33,13 +32,14 @@ function Header() {
   const onSearch = (evt) => {
     Navigate('/')
     baza.map((key) => {
-      if (key.title == render[0].title) {
+      if (key.title === render[0].title) {
         let data = key.obj.filter((item) => {
           if (
             item.name.toLowerCase().includes(evt.target.value.toLowerCase())
           ) {
             return item;
           }
+          return false
         });
         if (data.length !== 0) {
           render.map((kalit) => {
@@ -51,10 +51,10 @@ function Header() {
                 obj: data,
               },
             ]);
-            console.log(data);
+            return false
           });
           setSearch(false)
-        } else if (data.length == 0) {
+        } else if (data.length === 0) {
           setSearch(true)
         }
       }
