@@ -5,6 +5,7 @@ import Sersa from "../document/sersa/sersa";
 import Single from "../document/single/single";
 import Token from "../document/token/token";
 import Tolov from "../document/tolov/tolov";
+import Error from "../page/error/error";
 
 
 
@@ -17,6 +18,7 @@ function Routess() {
             <Route path="/karzinka" element={<Karzinka />} />
             <Route path="/tolov" element={<Tolov />} />
             <Route path="/dastavka" element={<Token />} />
+            <Route path="/*" element={<Error />} />
         </Routes>
       )
     

@@ -10,15 +10,20 @@ export const StatePriveder = ({ children }) => {
         } 
         return false
     })
-    const [sersa, setSersa] = useState(false);  // sersa bosilishini sanash
-    const [tanla, setTanla] = useState([]); // sersa tanlaganlarni yigish uchun
-    const [karzinka, setKarzinka] = useState([]);  // karzinkaga nechta tovar ketayotganini sanash
+
+    let local = JSON.parse(localStorage.getItem('sersa'))
+    let Kar = JSON.parse(localStorage.getItem('karzinka'))
+    
+    const [sersa, setSersa] = useState(local || []);  // sersa bosilishini sanash
+    const [tanla, setTanla] = useState(local || []); // sersa tanlaganlarni yigish uchun
+    const [karzinka, setKarzinka] = useState(Kar || []);  // karzinkaga nechta tovar ketayotganini sanash
     const [baza, setBaza] = useState(kereli); // ummumiy data malumotlari
     const [render, setRender] = useState(renerUchun ? renerUchun : []); // render boladigan state filter
     const [single, setSingle] = useState({}); // single pagega otish
     const [collapsed, setCollapsed] = useState(true); // menu button ochilib yopilishi uchun
     const [til, setTil] = useState('uz') // til tanlash uchun state;
-    const [search, setSearch] = useState(false);
+    const [search, setSearch] = useState(false); // Search uchun
+    // const [hero, setHero] = useState(true); // hero ochilib yopilishi uchun
 
     const data  ={
         sersa,
