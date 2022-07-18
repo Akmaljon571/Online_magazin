@@ -20,12 +20,12 @@ function Home() {
       }
 
       const sersaPush = (id, evt) => {
-        if (evt.target.src == boshSersa) {
+        if (evt.target.src === boshSersa) {
            evt.target.src = TolliqSersa
            setTanla([id, ...tanla])
            setTrus([id.id, ...trus])
 
-        } else if (evt.target.src == TolliqSersa) {
+        } else if (evt.target.src === TolliqSersa) {
           let san = tanla.filter(key => {
             if (key.id === id.id) {
                setTrus(trus.filter(kk => {
@@ -33,14 +33,16 @@ function Home() {
                     return kk
                   }
                 }))
+                return false
             }
             if (key.id !== id.id) {
               return key
             } 
             evt.target.src = boshSersa
+            return false
           })
           
-          setTanla(san);
+          setTanla(san ? san : []);
         }
       }
         

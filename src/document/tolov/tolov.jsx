@@ -45,9 +45,9 @@ function Tolov() {
     }
 
     useEffect(() => {
-      console.log(bot);
       if (bot.token) {
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chatId}&parse_mode=html&text=${bot.data}`)
+        navigate('/dastavka')
       }
     }, [bot]);
  

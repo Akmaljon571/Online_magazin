@@ -1,4 +1,4 @@
-export default {
+let til =  {
     uz: {
         som: ' so\'m',
         search: 'Kategoriya',
@@ -99,3 +99,5 @@ export default {
 
     },
 }
+
+export default til

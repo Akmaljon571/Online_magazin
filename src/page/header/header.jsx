@@ -58,6 +58,7 @@ function Header() {
           setSearch(true)
         }
       }
+      return false
     });
   };
 

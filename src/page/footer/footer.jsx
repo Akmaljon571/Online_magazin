@@ -50,7 +50,7 @@ function Footer() {
                 <div className="footer_ulash">
                 <h2 className='footer_h5'>{language[til].boglan}</h2>
                 <div className="img_otas">
-                    <a href={'/'} className="footer_tg"></a>
+                    <a href={'/'} className="footer_tg">.</a>
                     <a href={'/'} className="footer_insta">.</a>
                     <a href={'/'} className="footer_call">.</a>
                     <Link to={'/tolov'} className="footer_web">.</Link>

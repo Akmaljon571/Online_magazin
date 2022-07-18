@@ -1,4 +1,4 @@
-export default[
+let Arr = [
     {
         name: 'Kiyim',
         title: 'kiyim',
@@ -1349,3 +1349,5 @@ export default[
     },
     
 ]
+
+export default Arr
