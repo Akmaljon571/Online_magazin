@@ -9,8 +9,6 @@ import language from "../../language";
 function Header() {
   const {
     karzinka,
-    collapsed,
-    setCollapsed,
     setSearch,
     setTil,
     tanla,
