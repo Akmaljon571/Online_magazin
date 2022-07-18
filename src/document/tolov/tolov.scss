@@ -10,11 +10,12 @@
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 12px;
+    
   }
 
   &_otas {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     height: 600px;
   }

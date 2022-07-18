@@ -37,7 +37,7 @@
     &_header{
         height: 218px;
         display: flex;
-        align-items: start;
+        align-items: flex-start;
         justify-content: space-between;
         flex-direction: column;
 
@@ -92,7 +92,7 @@
 
     &_main{
         display: flex;
-        align-items: start;
+        align-items: flex-start;
         flex-direction: column;
         margin-bottom: 50px;
         margin-left: -350px;

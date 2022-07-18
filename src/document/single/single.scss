@@ -23,7 +23,7 @@
 
   &_item{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     list-style: none;
     flex-direction: column;
@@ -47,7 +47,7 @@
     width: 100%;
     padding-right: 95px;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     margin-top: 50px;
   }
@@ -100,7 +100,7 @@
 
   &_data{
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     margin-top: 23px;
   }
@@ -124,7 +124,7 @@
 
     &--main{
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: start;
       flex-direction: column;
       height: 520px;
