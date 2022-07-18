@@ -32,8 +32,8 @@ function Home() {
                   if (kk !== key.id) {
                     return kk
                   }
+                  return false
                 }))
-                return false
             }
             if (key.id !== id.id) {
               return key

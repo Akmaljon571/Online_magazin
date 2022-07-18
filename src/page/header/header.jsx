@@ -21,9 +21,6 @@ function Header() {
   } = useStart();
   const shef = useRef();
   const Navigate = useNavigate()
-  const menu = () => {
-    setCollapsed(!collapsed);
-  };
 
   const select_til = () => {
     setTil(shef.current.value);

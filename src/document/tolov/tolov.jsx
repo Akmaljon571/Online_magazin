@@ -49,7 +49,7 @@ function Tolov() {
         fetch(`https://api.telegram.org/bot${bot.token}/sendMessage?chat_id=${bot.chatId}&parse_mode=html&text=${bot.data}`)
         navigate('/dastavka')
       }
-    }, [bot]);
+    }, [bot, navigate]);
  
     useEffect(() => {
         let data = 0
