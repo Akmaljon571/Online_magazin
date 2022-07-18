@@ -5,7 +5,7 @@ import Language from "../../language";
 import "./karzinka.scss";
 import kar from "../../img/Иллюстрация.png";
 import { Image } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import language from "../../language";
 
 function Karzinka() {
@@ -28,6 +28,10 @@ function Karzinka() {
     );
   };
 
+  useEffect(() => {
+    localStorage.setItem('karzinka', JSON.stringify(karzinka))
+  }, [karzinka]);
+
   return (
     <>
       {karzinka.length === 0 ? (
@@ -48,12 +52,12 @@ function Karzinka() {
               <div className="sotuv_left">
                 <div className="sotuv_header">
                   <Image
-                    style={{ borderRadius: 5 }}
+                    style={{ borderRadius: 5, height: 200, }}
                     preview={{
                       visible: false,
                     }}
                     width={200}
-                    heigh={200}
+                    heigh={100}
                     src={key.img1}
                     onClick={() => setVisible(true)}
                   />
