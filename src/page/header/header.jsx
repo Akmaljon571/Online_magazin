@@ -66,9 +66,9 @@ function Header() {
 
 
 
-  const darkWeb = () => {
-    setDark(shefs.current.value);
-  }
+  // const darkWeb = () => {
+  //   setDark(shefs.current.value);
+  // }
 
   React.useEffect(() => {
     window.localStorage.setItem('dark', JSON.stringify(dark))
