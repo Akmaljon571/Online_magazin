@@ -13,7 +13,6 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
 } from '@ant-design/icons';
-import Hijab from './hijab';
  
  function User() {
    const { Header, Sider, Content } = Layout;
@@ -52,7 +51,7 @@ import Hijab from './hijab';
             },
             {
             key: '2',
-            icon: <Hijab />,
+            icon: <SkinOutlined />,
               label: `${kereli[1].name}`,
             },
             {
@@ -84,6 +83,11 @@ import Hijab from './hijab';
               key: '8',
               icon: <UploadOutlined />,
               label: `${kereli[7].name}`,
+            },
+            {
+              key: '9',
+              icon: <UploadOutlined />,
+              label: 'Profile',
             },
           ]}
         />
