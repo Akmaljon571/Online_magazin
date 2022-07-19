@@ -46,7 +46,6 @@
 
   &_footer{
     width: 100%;
-    padding-right: 95px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -234,9 +233,164 @@
     // padding: 20px;
   }
 
+  .single_footer{
+    padding: 0;
+    width: 100% !important;
+  }
+
+  .single_name{
+      font-size: 12px !important;
+  }
+
+  .single_narx{
+    height: 10px;
+    &1{
+      font-size: 12px !important;
+      height: 18px;
+    }
+  }
+
   .single_header{
     padding: 30px;
     width: 300px;
+  }
+}
+@media only screen and (max-width: 435px){
+  .single_img{
+    width: 50px;
+    height: 50px;
+    // padding: 20px;
+  }
+
+  .single_footer{
+    padding: 0;
+    width: 85% !important;
+  }
+
+  .single_name{
+      font-size: 12px !important;
+  }
+
+  .single_narx{
+    height: 10px;
+    &1{
+      font-size: 12px !important;
+      height: 18px;
+    }
+  }
+
+  .single_list{
+    width: 300px;
+  }
+
+  .single_header{
+    padding: 20px !important;
+    padding-right: 50px !important;
+    width: 300px;
+  }
+
+  .single_btn{
+    width: 300px;
+    &--btn{
+      width: 300px;
+    }
+    &--svg{
+      width: 300px;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 376px){
+  .single_img{
+    width: 50px;
+    height: 50px;
+    // padding: 20px;
+  }
+
+  .single_footer{
+    padding: 0;
+    width: 85% !important;
+  }
+
+  .single_name{
+      font-size: 12px !important;
+  }
+
+  .single_narx{
+    height: 10px;
+    &1{
+      font-size: 12px !important;
+      height: 18px;
+    }
+  }
+
+  .single_list{
+    width: 100% !important;
+    padding-right: 10px !important;
+  }
+
+  .single_header{
+
+    width: 100% !important;
+  }
+
+  .single_btn{
+    margin: 0 auto;
+    width: 200px !important;
+    &--btn{
+      width: 200px !important;
+    }
+    &--svg{
+      width: 200px !important;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 435px){
+  .single_img{
+    width: 50px;
+    height: 50px;
+    // padding: 20px;
+  }
+
+  .single_footer{
+    padding: 0;
+    width: 85% !important;
+  }
+
+  .single_name{
+      font-size: 12px !important;
+  }
+
+  .single_narx{
+    height: 10px;
+    &1{
+      font-size: 12px !important;
+      height: 18px;
+    }
+  }
+
+  .single_list{
+    width: 300px;
+  }
+
+  .single_header{
+    padding: 50px;
+    width: 300px;
+  }
+
+  .single_btn{
+    width: 300px;
+    &--btn{
+      width: 300px;
+    }
+    &--svg{
+      width: 300px;
+    }
   }
 }
 
