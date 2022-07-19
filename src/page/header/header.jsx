@@ -18,10 +18,10 @@ function Header() {
     render,
     baza,
     til,
-    dark, setDark
+    dark
   } = useStart();
   const shef = useRef();
-  const shefs = useRef();
+  // const shefs = useRef();
   const Navigate = useNavigate()
 
   const select_til = () => {
