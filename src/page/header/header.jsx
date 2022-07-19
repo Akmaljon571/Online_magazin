@@ -78,7 +78,7 @@ function Header() {
     <header className="header">
       <div className="header">
         <div className="navbar">
-          <Link to="/">
+          <Link to="/" className="header_logo_link">
             <Logo />
           </Link>
           <div onChange={onSearch} className="header_search">
