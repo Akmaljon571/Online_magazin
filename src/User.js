@@ -3,14 +3,17 @@ import { Container } from './components'
 import Routess from './routes/routes';
 import {
    UploadOutlined,
-   UserOutlined,
-   VideoCameraOutlined,
+   SkinOutlined,
  } from '@ant-design/icons';
  import { Layout, Menu } from 'antd';
  import React from 'react';
  import kereli from './kereli';
 import useStart from './hooks/useStart';
- 
+import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+} from '@ant-design/icons';
+import Hijab from './hijab';
  
  function User() {
    const { Header, Sider, Content } = Layout;
@@ -31,11 +34,8 @@ import useStart from './hooks/useStart';
          <span className='logo_bg'></span>
         <div className='logoDad'>
            <div className="logoMenu"></div>
-           <div onClick={() => setCollapsed(!collapsed)} className='logo_X logo_s'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#333" className="bi bi-arrow-right logo_s" viewBox="0 0 16 16">
-              <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-           </svg></div>
+
         </div>
-        <div className='logo_footer'></div>
         </>}
         
 
@@ -47,18 +47,43 @@ import useStart from './hooks/useStart';
           items={[
             {
               key: '1',
-              icon: <UserOutlined />,
+              icon: <SkinOutlined />,
               label: `${kereli[0].name}`,
             },
             {
             key: '2',
-            icon: <VideoCameraOutlined />,
+            icon: <Hijab />,
               label: `${kereli[1].name}`,
             },
             {
               key: '3',
               icon: <UploadOutlined />,
-              label: 'hozirhca',
+              label: `${kereli[2].name}`,
+            },
+            {
+              key: '4',
+              icon: <UploadOutlined />,
+              label: `${kereli[3].name}`,
+            },
+            {
+              key: '5',
+              icon: <UploadOutlined />,
+              label: `${kereli[4].name}`,
+            },
+            {
+              key: '6',
+              icon: <UploadOutlined />,
+              label: `${kereli[5].name}`,
+            },
+            {
+              key: '7',
+              icon: <UploadOutlined />,
+              label: `${kereli[6].name}`,
+            },
+            {
+              key: '8',
+              icon: <UploadOutlined />,
+              label: `${kereli[7].name}`,
             },
           ]}
         />
@@ -67,11 +92,11 @@ import useStart from './hooks/useStart';
         <Header
           className="site-layout-background"
         >
-          {/* {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+          <Headers/>
+          {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
-          })} */}
-          <Headers/>
+          })}
         </Header>
         <Content
           className="site-layout-background"

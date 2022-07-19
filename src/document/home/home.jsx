@@ -18,7 +18,7 @@ function Home() {
          navigate('/single')
        } 
       }
-
+      
       const sersaPush = (id, evt) => {
         if (evt.target.src === boshSersa) {
            evt.target.src = TolliqSersa

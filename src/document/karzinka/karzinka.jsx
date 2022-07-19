@@ -36,7 +36,7 @@ function Karzinka() {
     <>
       {karzinka.length === 0 ? (
         <div className="bosh">
-          <img src={kar} alt="" />
+          <img src={kar} alt="" className="bosh_img" />
           <h2 className="bosh_h2">{language[til].bosh}</h2>
           <p className="bosh_p">{language[til].lekin}</p>
           <Link to={"/"} className="bosh_btn">

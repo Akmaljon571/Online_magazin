@@ -45,8 +45,6 @@ body {
 .ant-layout-sider-dark{
   position: fixed !important;
   height: 100% !important;
-  max-width: 500px !important;
-  min-width: 500px !important;
   z-index: 1 !important;
   padding-top: 80px;
   background-color: #fff;
@@ -87,7 +85,7 @@ body {
 }
 
 .logoMenu{
-  width: 140px !important;
+  width: 85% !important;
   height: 50px;
   margin-top: 5px;
   margin-left: 5px;
@@ -99,8 +97,14 @@ body {
   border-radius: 2px;
   position: absolute;
   margin-top: -70px;
+}
 
-
+.hijab{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-right: 10px;
 }
 
 .logo_bg{
@@ -128,3 +132,23 @@ body {
 .ant-ribbon-wrapper{
   margin-right: 15px;
 }
+
+.trigger{
+  display: none !important;
+  position: absolute;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  right: 30px;
+}
+
+
+@media only screen and (max-width: 704px){
+
+  .trigger{
+    display: inline-block !important; 
+  }
+}
+

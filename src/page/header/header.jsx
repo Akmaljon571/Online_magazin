@@ -5,7 +5,6 @@ import { Badge } from "antd";
 import React, { useRef } from "react";
 import useStart from "../../hooks/useStart";
 import language from "../../language";
-import Fixed from "../../components/fixed/fixed";
 
 function Header() {
 
@@ -44,7 +43,7 @@ function Header() {
           render.map((kalit) => {
             setRender([
               {
-                name: "input",
+                name: kalit.name,
                 title: kalit.title,
                 img1: kalit.img1,
                 obj: data,
@@ -156,7 +155,6 @@ function Header() {
         </div>
       </div>
       <Hero />
-      <Fixed />
     </header>
   );
 }
