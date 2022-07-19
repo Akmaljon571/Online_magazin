@@ -212,9 +212,9 @@ body{
 @media only screen and (max-width: 473px){
     .header{
         &_input{
-            left: -50px;
+            left: -80px;
             height: 50px;
-            width: 200px;
+            width: 250px;
             position: absolute;
             margin-bottom: -150px;
         }
@@ -233,7 +233,7 @@ body{
 
         &_svg{
             top: 45px;
-            right: -130px;
+            right: -150px;
         }
 
     }
