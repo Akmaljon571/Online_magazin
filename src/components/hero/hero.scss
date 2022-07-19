@@ -1,7 +1,7 @@
 .hero {
   cursor: pointer;
   margin-top: 22px;
-  width: 70%;
+  max-width: 1590px;
   display: flex;
   padding: 0 20px;
   align-items: center;
@@ -41,9 +41,112 @@
 
 .ant-input-group-wrapper {
   width: 25% !important;
-  
 }
 
-// .ant-input-group-addon{
-//   width: 20px !important;
-// }
+@media only screen and (max-width: 1440px){
+  .hero{
+     gap: 40px;
+  }
+}
+@media only screen and (max-width: 1368px){
+  .hero{
+     gap: 30px;
+  }
+}
+@media only screen and (max-width: 1290px){
+  .hero{
+     gap: 20px;
+
+     &_h2{
+      font-size: 17px;
+     }
+  }
+}
+@media only screen and (max-width: 1219px){
+  .hero{
+     gap: 10px;
+
+     &_h2{
+      font-size: 15px;
+     }
+
+     &_img{
+       width: 50px !important;
+       height: 50px !important;
+     }
+  }
+}
+@media only screen and (max-width: 1159px){
+  .hero{
+     gap: 1px;
+
+     &_h2{
+      font-size: 12px;
+     }
+
+     &_img{
+       width: 50px !important;
+       height: 50px !important;
+     }
+  }
+}
+@media only screen and (max-width: 1080px){
+  .hero{
+     gap: 0px;
+
+     &_image{
+      width: 120px;
+     }
+
+     &_h2{
+      width: 120px;
+      font-size: 12px;
+     }
+
+     &_img{
+       width: 50px !important;
+       height: 50px !important;
+     }
+  }
+}
+@media only screen and (max-width: 1000px){
+  .hero{
+     gap: 0px;
+
+     &_image{
+      width: 100px;
+     }
+
+     &_h2{
+      width: 100px;
+      font-size: 12px;
+     }
+
+     &_img{
+       width: 50px !important;
+       height: 50px !important;
+     }
+  }
+}
+@media only screen and (max-width: 859px){
+  .hero{
+     &_image{
+      width: 80px;
+     }
+
+     &_h2{
+      width: 80px;
+      font-size: 12px;
+     }
+
+     &_img{
+       width: 50px !important;
+       height: 50px !important;
+     }
+  }
+}
+@media only screen and (max-width: 704px){
+  .hero{
+    display: none;
+  }
+}

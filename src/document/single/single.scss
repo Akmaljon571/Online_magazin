@@ -198,3 +198,41 @@
   }
 
 }
+
+@media only screen and (max-width: 825px){
+    .single{
+
+      &_left{
+        display: none;
+      }
+
+      &_name{
+        font-size: 20px;
+    }
+  
+    &_narx1{
+          font-size: 20px;     
+     }
+    }
+}
+@media only screen and (max-width: 600px){
+    .single{
+      margin-left: 20px;
+      &_left{
+        display: none;
+      }
+          &_name{
+            font-size: 15px;
+          }
+      
+        &_narx1{
+              font-size: 15px;     
+        }
+        &_footer{
+          width: 380px;
+        }
+        &_narx2{
+              font-size: 12px;     
+        }
+    }
+}

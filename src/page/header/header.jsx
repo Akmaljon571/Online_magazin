@@ -5,8 +5,10 @@ import { Badge } from "antd";
 import React, { useRef } from "react";
 import useStart from "../../hooks/useStart";
 import language from "../../language";
+import Fixed from "../../components/fixed/fixed";
 
 function Header() {
+
   const {
     karzinka,
     setSearch,
@@ -15,9 +17,11 @@ function Header() {
     setRender,
     render,
     baza,
-    til
+    til,
+    dark, setDark
   } = useStart();
   const shef = useRef();
+  const shefs = useRef();
   const Navigate = useNavigate()
 
   const select_til = () => {
@@ -56,6 +60,19 @@ function Header() {
       return false
     });
   };
+
+
+
+
+
+
+  const darkWeb = () => {
+    setDark(shefs.current.value);
+  }
+
+  React.useEffect(() => {
+    window.localStorage.setItem('dark', JSON.stringify(dark))
+  }, [dark]);
 
   return (
     
@@ -100,11 +117,12 @@ function Header() {
               +998900456961
             </a>
           </div>
-          <select ref={shef} className="header_til" onChange={select_til}>
+          <select ref={shef} value={til} className="header_til" onChange={select_til}>
             <option value="uz">🇺🇿 Uz</option>
             <option value="ru">🇷🇺 Ru</option>
             <option value="en">🇱🇷 En</option>
           </select>
+          
           <div className="navbar_svg">
             <Link to="/tanlanganlar">
               <Badge count={tanla.length}>
@@ -138,16 +156,10 @@ function Header() {
         </div>
       </div>
       <Hero />
+      <Fixed />
     </header>
   );
 }
 
 export default Header;
 
-// render.filter(key => {
-//   key.obj.filter(item =>{
-//     if (item.name.toLowerCase().includes(evt.target.value.toLowerCase())) {
-//       return item
-//     }
-//    })
-// })

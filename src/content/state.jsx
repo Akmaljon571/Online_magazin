@@ -14,6 +14,7 @@ export const StatePriveder = ({ children }) => {
     let local = JSON.parse(localStorage.getItem('sersa'))
     let Kar = JSON.parse(localStorage.getItem('karzinka'))
     let localtrus = JSON.parse(localStorage.getItem('trus'))
+    let Dark = JSON.parse(localStorage.getItem('dark'))
     
     const [sersa, setSersa] = useState(local || []);  // sersa bosilishini sanash
     const [tanla, setTanla] = useState(local || []); // sersa tanlaganlarni yigish uchun
@@ -25,6 +26,7 @@ export const StatePriveder = ({ children }) => {
     const [til, setTil] = useState('uz') // til tanlash uchun state;
     const [search, setSearch] = useState(false); // Search uchun
     const [trus, setTrus] = useState(localtrus || []);
+    const [dark, setDark] = useState(Dark || 'oq');
     // const [hero, setHero] = useState(true); // hero ochilib yopilishi uchun
     const data  ={
         sersa,
@@ -46,7 +48,9 @@ export const StatePriveder = ({ children }) => {
         search,
         setSearch,
         trus,
-        setTrus
+        setTrus,
+        dark,
+        setDark
     }
 
 

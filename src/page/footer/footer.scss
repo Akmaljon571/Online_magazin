@@ -141,3 +141,35 @@
 .footer_active{
     color: #FFA542;
 }
+
+@media only screen and (max-width: 1305px){
+    .footer{
+        &_ulash{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 1070px){
+    .footer{
+        &_til--ota{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 1070px){
+    .footer{
+        &_til--ota{
+            display: inline-block;
+        }
+
+        &_list{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 490px){
+    .footer{
+       display: none;
+    }
+}

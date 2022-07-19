@@ -1,5 +1,5 @@
 import './hero.scss'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useStart from '../../hooks/useStart'
 import { Image } from 'antd';
 import { useNavigate } from 'react-router-dom';
