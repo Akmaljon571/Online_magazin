@@ -30,6 +30,7 @@ function Hero() {
           setImg(key)
           setVisible(!visible)
          }
+         return false
       })
     }
 

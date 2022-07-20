@@ -1,5 +1,5 @@
 import "./header.scss";
-import { Hero, Logo } from "../../components";
+import { Logo } from "../../components";
 import { Link, useNavigate } from "react-router-dom";
 import { Badge } from "antd";
 import React, { useRef } from "react";
@@ -17,8 +17,7 @@ function Header() {
     render,
     baza,
     til,
-    dark,
-    tokenJson
+    dark
   } = useStart();
   const shef = useRef();
   // const shefs = useRef();

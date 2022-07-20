@@ -10,7 +10,7 @@ import { SmileOutlined } from '@ant-design/icons';
 function Modal() {
   const key = "updatable";
   const navigate = useNavigate()
-  const { setTokenJosn, tokenJson, setTokenModal } = useStart();
+  const { setTokenJosn, setTokenModal } = useStart();
   const formItemLayout = {
     labelCol: {
       span: 4,
@@ -29,12 +29,11 @@ function Modal() {
     },
   };
   const [form] = Form.useForm();
-  const [checkNick, setCheckNick] = useState(false);
   const ism = useRef();
   const password = useRef();
   useEffect(() => {
     form.validateFields(["nickname"]);
-  }, [checkNick, form]);
+  }, [form]);
 
   const onCheck = async () => {
     try {
