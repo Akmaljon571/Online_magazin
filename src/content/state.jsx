@@ -11,13 +11,15 @@ export const StatePriveder = ({ children }) => {
         } 
         return false
     })
-
+    const token = JSON.parse(localStorage.getItem('token'))
     let local = JSON.parse(localStorage.getItem('sersa'))
     let Kar = JSON.parse(localStorage.getItem('karzinka'))
     let localtrus = JSON.parse(localStorage.getItem('trus'))
     let Dark = JSON.parse(localStorage.getItem('dark'))
     
+    const [tokenModal, setTokenModal] = useState(false);  // token kelganda modal ochilib yopilishi
     const [sersa, setSersa] = useState(local || []);  // sersa bosilishini sanash
+    const [tokenJson, setTokenJosn] = useState(token || null);  // jsondagi token keelish yoki kelmasligi
     const [tanla, setTanla] = useState(local || []); // sersa tanlaganlarni yigish uchun
     const [karzinka, setKarzinka] = useState(Kar || []);  // karzinkaga nechta tovar ketayotganini sanash
     const [baza, setBaza] = useState(kereli); // ummumiy data malumotlari
@@ -51,7 +53,11 @@ export const StatePriveder = ({ children }) => {
         trus,
         setTrus,
         dark,
-        setDark
+        setDark,
+        tokenJson,
+        setTokenJosn,
+        tokenModal,
+        setTokenModal
     }
 
 

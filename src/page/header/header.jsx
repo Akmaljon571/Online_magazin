@@ -17,7 +17,8 @@ function Header() {
     render,
     baza,
     til,
-    dark
+    dark,
+    tokenJson
   } = useStart();
   const shef = useRef();
   // const shefs = useRef();
@@ -154,7 +155,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <Hero />
+      
     </header>
   );
 }

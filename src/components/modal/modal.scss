@@ -1,0 +1,33 @@
+.modal{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.296);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_ota{
+        width: 80%;
+        margin: 0 auto; 
+        background-color: rgb(75, 75, 119);
+        border-radius: 15px;
+        padding: 35px;
+        text-align: center;
+    }
+}
+
+.ant-form-item-control-input, .ant-form-item-control-input-content
+, .ant-form-item-control{
+    max-width: 300px !important;
+    margin: 0 auto;
+}
+
+.ant-input{
+    height: 50px;
+    border-radius: 15px !important;
+}
