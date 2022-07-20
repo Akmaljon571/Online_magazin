@@ -112,7 +112,7 @@ function Modal() {
             name="nickname"
             rules={[
               {
-                required: checkNick,
+                required: false,
                 message: "Faqat Admin Uchun",
               },
             ]}
