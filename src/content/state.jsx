@@ -4,8 +4,9 @@ import kereli from "../kereli";
 export const State = createContext()
 
 export const StatePriveder = ({ children }) => {
+
     let renerUchun = kereli.filter((key) => {
-        if (key.title === 'kiyim') {
+        if (key.title === kereli[0].title) {
             return key
         } 
         return false

@@ -1,6 +1,7 @@
 let Arr = [
     {
         name: 'Kiyim',
+        id: 1,
         title: 'kiyim',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -170,6 +171,7 @@ let Arr = [
     },
     {
         name: 'Hijob',
+        id: 2,
         title: 'hijob',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -338,6 +340,7 @@ let Arr = [
     },
     {
         name: 'Yupka',
+        id: 3,
         title: 'yupka',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -507,6 +510,7 @@ let Arr = [
     },
     {
         name: 'Oyoq kiyim',
+        id: 4,
         title: 'oyoqKiyim',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -675,6 +679,7 @@ let Arr = [
     },
     {
         name: 'Tellefon',
+        id: 5,
         title: 'tel',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -844,6 +849,7 @@ let Arr = [
     },
     {
         name: 'suinner',
+        id: 6,
         title: 'suinner',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -1012,6 +1018,7 @@ let Arr = [
     },
     {
         name: 'Mishka',
+        id: 7,
         title: 'mishka',
         img1: 'https://picsum.photos/200/300',
         obj: [{
@@ -1181,6 +1188,7 @@ let Arr = [
     },
     {
         name: 'Kepka',
+        id: 8,
         title: 'kepka',
         img1: 'https://picsum.photos/200/300',
         obj: [{

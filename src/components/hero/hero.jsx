@@ -25,7 +25,7 @@ function Hero() {
         return false
       })
       setRender(data ? data : [])
-      navigate('/')
+      navigate('/') 
     }
 
     return ( 

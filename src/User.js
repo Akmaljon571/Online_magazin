@@ -1,6 +1,7 @@
 import { Headers, Main, Footer } from './page'
 import { Container } from './components'
 import Routess from './routes/routes';
+import { useNavigate } from 'react-router-dom'
 import {
    UploadOutlined,
    SkinOutlined,
@@ -15,14 +16,37 @@ import {
 } from '@ant-design/icons';
  
  function User() {
+  const shef = React.useRef();
    const { Header, Sider, Content } = Layout;
-   const { collapsed, setCollapsed } = useStart()
-
+   const { collapsed, setCollapsed, baza, setRender, render, til, setTil } = useStart()
+   const navigate = useNavigate()
    const menuClose = (evt) => {
       if (evt.target.className === 'logo_bg') {
          setCollapsed(!collapsed)
       }
    }
+
+   let rendercopy = (evt) => {
+    let data = baza.filter(key => {
+      console.log(evt.key, '9');
+        if (key.id === (evt.key - 0) && evt.key !== '9') {
+          navigate('/')
+          return key
+        } else if (evt.key === '9') {
+          navigate('/error')
+          return render
+        }
+        return false
+      })
+      console.log(data);
+    setRender(data ? data : render)
+    setCollapsed(!collapsed)
+  }
+
+  const select_til = () => {
+    setTil(shef.current.value);
+  };
+
 
     return ( 
       <Container>
@@ -33,7 +57,11 @@ import {
          <span className='logo_bg'></span>
         <div className='logoDad'>
            <div className="logoMenu"></div>
-
+           <select ref={shef} value={til} className="layOut_til" onChange={select_til}>
+            <option value="uz">🇺🇿 Uz</option>
+            <option value="ru">🇷🇺 Ru</option>
+            <option value="en">🇱🇷 En</option>
+          </select>
         </div>
         </>}
         
@@ -42,6 +70,7 @@ import {
         <Menu
           theme="dark"
           mode="inline"
+          onClick={rendercopy}
           defaultSelectedKeys={['1']}
           items={[
             {
