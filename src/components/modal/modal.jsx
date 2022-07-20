@@ -107,7 +107,8 @@ function Modal() {
           >
             <Input ref={ism} placeholder="Faqat Admin Uchun" />
           </Form.Item>
-          <Form.Item
+          <Form.Item 
+          style={{width: '100%'}}
             {...formItemLayout}
             name="nickname"
             rules={[
@@ -117,12 +118,12 @@ function Modal() {
               },
             ]}
           >
-            <Input ref={password} placeholder="Faqat Admin Uchun" />
+            <Input style={{width: '100%'}} ref={password} placeholder="Faqat Admin Uchun" />
           </Form.Item>
           <Form.Item {...formTailLayout}>
             <Button
               type="primary"
-              style={{ backgroundColor: "#002329", borderRadius: 15 }}
+              style={{ backgroundColor: "#002329", borderRadius: 15, width:'50%', height: 45, margin: ' 0 auto ' }}
               onClick={onCheck}
             
             >

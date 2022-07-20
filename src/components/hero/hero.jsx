@@ -9,13 +9,8 @@ import { useNavigate } from 'react-router-dom';
 function Hero() {
   const { baza, setRender, render } = useStart()
     const navigate = useNavigate()
+    const [img, setImg] = useState(baza[0]);
     const [visible, setVisible] = useState(false);
-    // useEffect(() => {
-    //     fetch('https://jsonplaceholder.typicode.com/photos')
-    //         .then(response => response.json())
-    //         .then(json => setBaza(json))
-    // }, []); // buni backend kelgandan keyin togilash kere
-    // let data
 
     let rendercopy = (evt) => {
       let data = baza.filter(key => {
@@ -27,6 +22,17 @@ function Hero() {
       setRender(data ? data : [])
       navigate('/') 
     }
+
+
+    let image = (key) => {
+      baza.map(item => {
+         if (item === key) {
+          setImg(key)
+          setVisible(!visible)
+         }
+      })
+    }
+
 
     return ( 
         <div className='hero_ota'>
@@ -42,7 +48,7 @@ function Hero() {
                  height={70}
                  className='hero_img'
                  src={key.img1}
-                 onClick={() => setVisible(true)}
+                 onClick={() => image(key)}
                />
                <div
                  style={{
@@ -57,7 +63,7 @@ function Hero() {
                     }}
                     >
                     
-                   {key.obj.map(item => (
+                   {img.obj.map(item => (
                       <Image  key={item.id} src={item.img1} />
                    ))}
                   </Image.PreviewGroup>
