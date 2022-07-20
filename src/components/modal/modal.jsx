@@ -1,7 +1,7 @@
 import "./modal.scss";
 import { Button, Form, Input, message, notification } from "antd";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import useStart from "../../hooks/useStart";
 import { useNavigate } from "react-router-dom";
 import { SmileOutlined } from '@ant-design/icons';
